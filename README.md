@@ -1,6 +1,4 @@
 # BlogApp
-
-![image](https://user-images.githubusercontent.com/98361289/199348084-96e2d671-5483-407f-8a6e-db5bb4fb63df.png)
  
 > This a database for users, comments likes and posts with their respective forign keys.
 
@@ -14,6 +12,8 @@
 - Ruby on Rails
 - Rails linters
 - Visual Studio Code
+
+![image](https://user-images.githubusercontent.com/98361289/199348084-96e2d671-5483-407f-8a6e-db5bb4fb63df.png)
 
 ## Getting Started
 
