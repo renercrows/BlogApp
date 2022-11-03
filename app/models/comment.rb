@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Comment < ApplicationRecord
   after_save :update_comments_counter
   belongs_to :user
