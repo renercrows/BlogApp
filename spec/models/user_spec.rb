@@ -14,7 +14,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'Name length should be lesser than 15 characters' do
-      expect(subject.name).to satisfy { |n| n.length <= 15 }
+      expect(subject.name).to (satisfy) { |n| n.length <= 15 }
     end
 
     it 'Posts counter should return a number' do
