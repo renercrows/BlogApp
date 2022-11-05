@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Like < ApplicationRecord
   after_save :update_likes_counter
   belongs_to :user
