@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+module PostsHelper
   def index; end
 
   def show
