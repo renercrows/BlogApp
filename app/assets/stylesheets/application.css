@@ -14,40 +14,40 @@
  *= require_self
  */
 
- body {
+body {
   display: flex;
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
- }
+}
 
- .user-img {
+.user-img {
   display: flex;
   justify-content: center;
- }
+}
 
- .user-container {
+.user-container {
   margin-top: 4rem;
- }
+}
 
- .users-container {
+.users-container {
   margin-top: 4rem;
- }
+}
 
- .user-bio {
+.user-bio {
   outline: 1px solid black;
- }
+}
 
- .user-info {
+.user-info {
   outline: 1px solid black;
   margin-top: 3rem;
   margin-bottom: 3rem;
- }
+}
 
- .user-post {
+.user-post {
   outline: 1px solid black;
   margin-top: 3rem;
- }
+}
 
- .see-all-btn {
+.see-all-btn {
   margin-top: 1rem;
- }
+}
