@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.user-img {
+  display: flex;
+  justify-content: center;
+}
+
+.user-container {
+  margin-top: 4rem;
+}
+
+.users-container {
+  margin-top: 4rem;
+}
+
+.user-bio {
+  outline: 1px solid black;
+}
+
+.user-info {
+  outline: 1px solid black;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.user-post {
+  outline: 1px solid black;
+  margin-top: 3rem;
+}
+
+.see-all-btn {
+  margin-top: 1rem;
+}

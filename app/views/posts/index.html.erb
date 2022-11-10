@@ -1,1 +1,35 @@
-<h1>The posts From The User</h1>
+<main>
+  <section class='user-container'>
+      <div class='user'>
+        <div class='user-image'>
+          <img src='<%= @user.photo %>' alt='user_img'>
+        </div>
+        <div class='user-info'>
+          <h2><%= @user.name %></h2>
+          <span>
+            Posts: <%= @user.posts_counter %>
+          </span>
+        </div>
+      </div>
+
+      <% @user.posts.each do |post| %>
+        <%= link_to user_post_path(@user, post) do %>
+        <div class='user-post'>
+          <h3>Post <%= post.id %></h3>
+          <p><%= post.text %></p>
+          <span>Comments: <%= post.comments_counter %></span>
+          <span>Likes: <%= post.likes_counter %></span>
+        </div>
+        <div class="user-post-comments">
+          <% post.recent_comments do |comment| %>
+            <div class="user-post-comment">
+              <p><strong><%= comment.user.name %>:</strong></p>
+              <p><%= comment.text %></p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+      <% end %>
+
+  </section>
+</main>
