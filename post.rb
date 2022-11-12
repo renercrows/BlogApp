@@ -7,7 +7,7 @@ class Post < ApplicationRecord
   validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def recent_comments
-    comments.last(5)
+    comments.includes([:user]).last(5)
   end
 
   private

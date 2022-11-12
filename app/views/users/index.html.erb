@@ -1,17 +1,15 @@
-<main>
-  <section class='users-container'>
-    <% @users.each do |user| %>
-      <%= link_to user do%>
-        <div class='user'>
-          <div class='user-img'>
-            <img src='<%= user.photo %>'>
-          </div>
-          <div class='user-info'>
-            <h2><%= user.name %></h2>
-            <span>Number of posts: <%= user.posts_counter %></span>
-          </div>
-        </div>
-      <% end %>
+<div>
+  <% @users.each do |user| %>
+    <%= link_to user do%>
+    <div class='user-card'>
+    <div class='img-container' >
+    <img src ='<%= user.photo %>' alt='user_image'  />
+    </div>
+    <div class='user-card2'>
+      <h2>Name: <%= user.name %></h2>
+      <h3 class='user-container2'>Number of posts:<%= user.posts_counter %></h3>
+    </div>
+    </div>
     <% end %>
-  </section>
-</main>
+<% end %>
+</div>

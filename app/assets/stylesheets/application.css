@@ -15,22 +15,35 @@
  */
 
 body {
-  display: flex;
-  justify-content: center;
   font-family: 'Open Sans', sans-serif;
 }
 
-.user-img {
+.user-card {
   display: flex;
   justify-content: center;
+  padding: 2rem;
+}
+
+.img-container {
+  margin-left: -1rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
 }
 
 .user-container {
+  display: flex;
+  margin-left: 45%;
+  width: fit-content;
+  flex-direction: column;
   margin-top: 4rem;
 }
 
 .users-container {
   margin-top: 4rem;
+}
+
+.user-container3 {
+  margin-top: 5rem;
 }
 
 .user-bio {
@@ -46,6 +59,37 @@ body {
 .user-post {
   outline: 1px solid black;
   margin-top: 3rem;
+}
+
+.user-post-container {
+  margin-left: 45%;
+}
+
+.new-post {
+  margin-left: 45%;
+  margin-top: 15rem;
+}
+
+.userID {
+  font-size: 30px;
+}
+
+.user-card-bio {
+  margin-top: 5rem;
+}
+
+.post-title {
+  font-size: 30px;
+}
+
+.user-bio-post {
+  margin-top: 5rem;
+}
+
+.post-container {
+  margin-left: 45%;
+  margin-top: 5rem;
+  width: 15%;
 }
 
 .see-all-btn {
