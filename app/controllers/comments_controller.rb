@@ -11,8 +11,8 @@ class CommentsController < ApplicationController
       flash.now[:error] = 'There is an error'
     end
   end
-    def comment
-      params.require(:comment).permit(:text)
-    end
-end
 
+  def comment
+    params.require(:comment).permit(:text)
+  end
+end
