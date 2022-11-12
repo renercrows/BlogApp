@@ -88,5 +88,3 @@ group :test do
 end
 
 gem 'rspec-html-matchers'
-
-gem 'bullet'
