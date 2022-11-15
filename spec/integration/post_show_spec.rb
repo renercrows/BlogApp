@@ -1,7 +1,20 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :feature do
-describe 'post/show' do
+  before :each do
+    @user1 = User.create(name: 'Dave',
+                         photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGzZ0z42r96DLQES7kolpBPw5xM2UqS04GKKYyZiF&s', bio: 'Teacher from Brazil.')
+
+    @post1 = Post.create(user: @user1, title: 'Hello', text: 'This is my first post')
+    @post2 = Post.create(user: @user1, title: 'Title 2', text: 'This is my second post')
+
+    @comment1 = Comment.create(post: @post1, user: @user1, text: 'Hi Luisa!')
+    @comment2 = Comment.create(post: @post2, user: @user1, text: 'Hi Samuel!')
+  end
+
+  describe 'post/show' do
+    include RSpecHtmlMatchers
+
     before(:each) do
       visit "users/#{@user1.id}/posts/#{@user1.posts[0].id}"
     end
@@ -29,4 +42,5 @@ describe 'post/show' do
     it 'show the comment each commentor left.' do
       expect(page).to have_content(@comment1.text)
     end
+  end
 end

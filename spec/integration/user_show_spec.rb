@@ -1,7 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :feature do
-describe 'user show view' do
+  before :each do
+    @user1 = User.create(name: 'Milo', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from New York.')
+    Post.create(user: @user1, title: 'Title', text: 'Creating post')
+    Post.create(user: @user1, title: 'hello', text: 'Creating post')
+    Post.create(user: @user1, title: 'Hill', text: 'Creating post')
+  end
+
+  describe 'user show view' do
+    RSpec.configure do |config|
+      config.include RSpecHtmlMatchers
+    end
+
     it 'show usernames' do
       visit "/users/#{@user1.id}"
       expect(page).to have_content(@user1.name)
@@ -40,3 +51,4 @@ describe 'user show view' do
       expect(page).to have_tag('a', href: user_post_path(@user1, @user1.posts[0].id))
     end
   end
+end
