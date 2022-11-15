@@ -85,6 +85,5 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'rspec-html-matchers'
 end
-
-gem 'rspec-html-matchers'
