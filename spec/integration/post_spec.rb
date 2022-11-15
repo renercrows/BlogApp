@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.feature 'Posts', type: :feature do
   before :each do
-    @user1 = User.create(name: 'Dave', photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGzZ0z42r96DLQES7kolpBPw5xM2UqS04GKKYyZiF&s', bio: 'Teacher from Brazil.')
+    @user1 = User.create(name: 'Dave',
+                         photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGzZ0z42r96DLQES7kolpBPw5xM2UqS04GKKYyZiF&s', bio: 'Teacher from Brazil.')
     @post1 = Post.create(user: @user1, title: 'Hello', text: 'This is my first post')
     @post2 = Post.create(user: @user1, title: 'Title 2', text: 'This is my second post')
     @comment1 = Comment.create(post: @post1, user: @user1, text: 'Good morning')

@@ -35,7 +35,6 @@ RSpec.feature 'Users', type: :feature do
   end
 
   describe 'user show view' do
-
     it 'show usernames' do
       visit "/users/#{@user1.id}"
       expect(page).to have_content(@user1.name)
