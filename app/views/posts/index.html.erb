@@ -11,7 +11,7 @@
           </span>
         </div>
       </div>
-      <% @user.posts.each do |post| %>
+      <% @posts.each do |post| %>
         <%= link_to user_post_path(@user, post) do %>
         <div class='user-post'>
           <h3>Post <%= post.id %></h3>

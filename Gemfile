@@ -83,8 +83,7 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara'
+  gem 'rspec-html-matchers'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
-
-gem 'rspec-html-matchers'

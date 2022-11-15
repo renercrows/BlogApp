@@ -13,8 +13,6 @@
 - Rails linters
 - Visual Studio Code
 
-![image](https://user-images.githubusercontent.com/98361289/199348084-96e2d671-5483-407f-8a6e-db5bb4fb63df.png)
-
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
@@ -47,6 +45,11 @@ $ git clone https://github.com/renercrows/BlogApp.git
 - GitHub: @renercrows
 - Twitter: @renercrows
 - LinkedIn: (www.linkedin.com/in/maximiliano-ungredda)
+
+**Karam Fouad**
+- GitHub: [@karam084](https://github.com/karam084)
+- Twitter: [@ElarabFouad](https://twitter.com/ElarabFouad)
+- LinkedIn: [Karam Fouad](https://www.linkedin.com/in/karam-fouad-179830214/)
 
 ## 🤝 Contributing
 
