@@ -3,9 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :comments
-  has_many :likes
-  has_many :posts
+  has_many :posts, foreign_key: 'user_id', dependent: :destroy
+  has_many :comments, foreign_key: 'user_id', dependent: :destroy
+  has_many :likes, foreign_key: 'user_id', dependent: :destroy
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def last_three_posts
