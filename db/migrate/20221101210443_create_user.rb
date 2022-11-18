@@ -2,8 +2,9 @@ class CreateUser < ActiveRecord::Migration[7.0]
   def change
     create_table :users do |t|
       t.string :name
-      t.text :photo, default: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGzZ0z42r96DLQES7kolpBPw5xM2UqS04GKKYyZiF&s'
+      t.string :photo
       t.text :bio
+      t.integer :posts_counter, default: 0
 
       t.timestamps
     end
