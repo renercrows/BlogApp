@@ -1,13 +1,20 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find_by(id: params[:user_id])
-    @posts = @user.posts.includes(comment: [:user])
+    @posts = @user.posts.all
   end
 
   def show
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
     @comments = @post.comment
+  end
+
+  def destroy
+    @post = Post.find(params[:id]).destroy
+    redirect_to user_path(current_user.id), notice: 'Post deleted successfully'
   end
 
   def new
@@ -18,17 +25,17 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(params.require(:post).permit(:title, :text))
+    post = Post.new(post_params)
     post.user = current_user
-    respond_to do |format|
-      format.html do
-        if post.save
-          redirect_to user_posts_path(current_user.id), notice: 'Post successfully created'
-        else
-          flash.now[:notice] = "Error: Couldn't create post"
-          render :new, locals: { post: }
-        end
-      end
+    if @post.save
+      redirect_to user_path(current_user.id), notice: 'Post created successfully'
+    else
+      flash.now[:error] = 'Error: Post could not be saved. Please try again'
+      render :new
     end
+  end
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end

@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
-  has_many :comment
-  has_many :like
+  has_many :comment, dependent: :destroy
+  has_many :like, dependent: :destroy
   belongs_to :user
   after_save :posts_counter
 

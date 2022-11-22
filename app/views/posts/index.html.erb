@@ -12,20 +12,27 @@
         </div>
       </div>
       <% @posts.each do |post| %>
-        <%= link_to user_post_path(@user, post) do %>
-        <div class='user-post'>
-          <h3>Post <%= post.id %></h3>
-          <p><%= post.text %></p>
-          <span>Comments: <%= post.comments_counter %></span>
-          <span>Likes: <%= post.likes_counter %></span>
-        </div>
-        <div class="user-post-comments">
-          <% post.comment do |comment| %>
-            <div class="user-post-comment">
-              <p><strong><%= comment.user.name %>:</strong></p>
-              <p><%= comment.text %></p>
-            </div>
+        <div><%= link_to user_post_path(@user.id, post.id) do %>
+          <div class='user-post'>
+            <a href='/users/<%= @user.id %>/posts/<%= post.id %>'><h3><%= post.id %> : <%= post.title%></h3></a>
+            <p><%= post.text %></p>
+            <span>Comments: <%= post.comments_counter %></span>
+            <span>Likes: <%= post.likes_counter %></span>
+          </div>
+          <br>
+          <% if can? :destroy, post %>
+            <%= form_with model: post, url: user_post_path(@user, post), method: :delete do |form| %>
+              <%= form.submit "Delete Post", class: "see" %>
+            <% end %>
           <% end %>
+          <div class="user-post-comments">
+            <% post.comment do |comment| %>
+              <div class="user-post-comment">
+                <p><strong><%= comment.user.name %>:</strong></p>
+                <p><%= comment.text %></p>
+              </div>
+            <% end %>
+          </div>
         </div>
       <% end %>
       <% end %>
