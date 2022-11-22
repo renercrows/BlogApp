@@ -18,6 +18,17 @@ User.create(name: 'Lui',
 User.create(name: 'Sabrina',
     photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGzZ0z42r96DLQES7kolpBPw5xM2UqS04GKKYyZiF&s',
     bio: 'Teacher from Kenya.', email: 'sabrina@gmail.com', password: '123456', role: 'admin')
+=======
+    bio: 'Teacher from Brazil.', email: 'tiago@gmail.com', password: '123456')
+User.create(name: 'Jake',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGzZ0z42r96DLQES7kolpBPw5xM2UqS04GKKYyZiF&s',
+    bio: 'Teacher from Eritrea.', email: 'jake@gmail.com', password: '123456')
+User.create(name: 'Lui',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGzZ0z42r96DLQES7kolpBPw5xM2UqS04GKKYyZiF&s',
+    bio: 'Teacher from Thailand.', email: 'lui@gmail.com', password: '123456')
+User.create(name: 'Sabrina',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGzZ0z42r96DLQES7kolpBPw5xM2UqS04GKKYyZiF&s',
+    bio: 'Teacher from Kenya.', email: 'sabrina@gmail.com', password: '123456')
 User.create(name: 'Carl',
     photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGzZ0z42r96DLQES7kolpBPw5xM2UqS04GKKYyZiF&s',
     bio: 'Teacher from Venezuela.', email: 'carl@gmail.com', password: '123456', role: 'admin')
@@ -48,4 +59,5 @@ User.create(name: 'Carl',
     Post.create(user: User.find(5), title: 'Title 6', text: 'This is my post')
     
     Comment.create(post: Post.find(2), user: User.find(2), text: 'Hi There Girl!')
+    Comment.create(post: Post.find(3), user: User.find(4), text: 'Hi There Man!')
     Comment.create(post: Post.find(3), user: User.find(4), text: 'Hi There Man!')
