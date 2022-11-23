@@ -95,3 +95,22 @@ body {
 .see-all-btn {
   margin-top: 1rem;
 }
+
+.log-title {
+  margin-left: 45%;
+  margin-top: 5rem;
+}
+
+.field {
+  margin-left: 45%;
+}
+
+.actions {
+  margin-left: 45%;
+  margin-top: 1rem;
+}
+
+.log-links {
+  margin-left: 45%;
+  margin-top: 0.5rem;
+}
