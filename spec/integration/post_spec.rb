@@ -45,6 +45,6 @@ RSpec.feature 'Posts', type: :feature do
 
     it "When I click on a post, it redirects me to that post's show page." do
       expect(page).to have_tag('a', href: user_post_path(@user1, @user1.posts[0].id))
-    end
-  end
+    end
+  end
 end
