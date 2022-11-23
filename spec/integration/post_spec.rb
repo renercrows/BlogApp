@@ -12,7 +12,7 @@ RSpec.feature 'Posts', type: :feature do
     @comment2 = Comment.create(post: @post2, user: @user1, text: 'Hi Samuel!')
   end
 
-  describe "post/index" do
+  describe 'post/index' do
     include RSpecHtmlMatchers
 
     before(:each) do
@@ -27,7 +27,7 @@ RSpec.feature 'Posts', type: :feature do
       expect(page).to have_content(@user1.name)
     end
 
-    it "I can see the number of posts the user has written." do
+    it 'I can see the number of posts the user has written.' do
       expect(page).to have_content(@post1.comments_counter)
     end
 
@@ -35,11 +35,11 @@ RSpec.feature 'Posts', type: :feature do
       expect(page).to have_content(@post1.text)
     end
 
-    it "I can see how many comments a post has." do
+    it 'I can see how many comments a post has.' do
       expect(page).to have_content(@post1.comments_counter)
     end
 
-    it "I can see how many likes a post has." do
+    it 'I can see how many likes a post has.' do
       expect(page).to have_content(@post1.likes_counter)
     end
 

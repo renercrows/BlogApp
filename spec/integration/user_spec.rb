@@ -12,24 +12,24 @@ RSpec.feature 'Users', type: :feature do
     config.include RSpecHtmlMatchers
   end
 
-  it "show usernames" do
+  it 'show usernames' do
     visit '/'
     expect(page).to have_content(@user1.name)
   end
 
-  describe "user index view" do
-    it "show profile picture" do
+  describe 'user index view' do
+    it 'show profile picture' do
       visit '/'
       expect(page).to have_tag('img', src: @user1.photo)
     end
 
-    it "show link of profile picture" do
+    it 'show link of profile picture' do
       visit '/'
       expect(page).to have_tag('link')
     end
   end
 
-  it "show total number of post created" do
+  it 'show total number of post created' do
     visit '/'
     expect(page).to have_content(@user1.posts_counter)
   end
