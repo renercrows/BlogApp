@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
-  has_many :comment, dependent: :destroy
-  has_many :like, dependent: :destroy
+  has_many :comments
+  has_many :likes
   belongs_to :user
   after_save :update_posts_counter
   validates :title, presence: true, length: { maximum: 250 }
