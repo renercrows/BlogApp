@@ -14,7 +14,7 @@
       <% @posts.each do |post| %>
         <div><%= link_to user_post_path(@user.id, post.id) do %>
           <div class='user-post'>
-            <a href='/users/<%= @user.id %>/posts/<%= post.id %>'><h3><%= post.id %> : <%= post.title%></h3></a>
+            <a href='/users/<%= @user.id %>/posts/<%= post.id %>'><h3><%= post.title%></h3></a>
             <p><%= post.text %></p>
             <span>Comments: <%= post.comments_counter %></span>
             <span>Likes: <%= post.likes_counter %></span>
