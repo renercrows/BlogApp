@@ -20,7 +20,7 @@
           <span>Likes: <%= post.likes_counter %></span>
         </div>
         <div class="user-post-comments">
-          <% post.comment do |comment| %>
+          <% post.comments do |comment| %>
             <div class="user-post-comment">
               <p><strong><%= comment.user.name %>:</strong></p>
               <p><%= comment.text %></p>
