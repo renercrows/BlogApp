@@ -82,11 +82,11 @@ Example commands:
 Install this project with:
 
 <!--
-Example command: rails db:create
+Example command:
 
 ### Usage
 
-To run the project, execute the following command:
+To run the project, execute the following command: rails db:create
 
 <!--
 Example command:
