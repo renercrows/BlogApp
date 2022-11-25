@@ -7,11 +7,12 @@ To clone the repository you need to do: git clone https://github.com/renercrows/
 
 # 📗 Table of Contents
 
-- Description.
+- [Description](#description).
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
+- [Author](#author)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -79,21 +80,10 @@ Example commands:
 
 ### Install
 
-Install this project with:
+Install this project with: 
 
-<!--
-Example command:
-
-### Usage
-
-To run the project, execute the following command: rails db:create
-
-<!--
-Example command:
-
-```sh
-  rails server
-```
+- rails db:create
+- rails s
 
 <!-- AUTHORS -->
 
