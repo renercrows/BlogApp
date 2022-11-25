@@ -103,11 +103,9 @@ Example command:
 
 👤 **renercrows**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-
+- GitHub: @renercrows
+- Twitter: @renercrows
+- LinkedIn: (www.linkedin.com/in/maximiliano-ungredda)
 
 <!-- CONTRIBUTING -->
 
