@@ -1,4 +1,3 @@
-class Api::V1::CommentsController < Api::V1::ApplicationController
-  before_action :authenticate_user!
+class Api::V1::ApplicationController < ActionController::API
   respond_to :json
 end

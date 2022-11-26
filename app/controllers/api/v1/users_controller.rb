@@ -1,7 +1,6 @@
 class Api::V1::UsersController < Api::V1::ApplicationController
-  before_action :authenticate_user!
   def index
-    users = User.all
+    users = User.all.order('id ASC')
     render json: users, status: :ok
   end
 

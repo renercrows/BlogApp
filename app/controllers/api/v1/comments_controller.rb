@@ -1,5 +1,4 @@
 class Api::V1::CommentsController < Api::V1::ApplicationController
-  before_action :authenticate_user!
   def index
     comments = Comment.where(user_id: params[:user_id])
     render json: comments, status: :ok

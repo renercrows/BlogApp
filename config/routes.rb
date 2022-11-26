@@ -14,11 +14,11 @@ Rails.application.routes.draw do
     end  
   end
 
-  namespace :api do
-    namespace :v1 do
-      resources :users do
-        resources :posts, format: :json do
-          resources :comments, format: :json
+  namespace :api do # /api
+    namespace :v1 do # /api/v1
+      resources :users do # api/v1/users
+        resources :posts, format: :json do # api/v1/users/:user_id/posts
+          resources :comments, format: :json # api/v1/users/:user_id/posts/:post_id/comments
         end
       end
     end
