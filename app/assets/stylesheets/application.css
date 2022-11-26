@@ -14,7 +14,7 @@
  *= require_self
  */
 
-body {
+ body {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -97,20 +97,29 @@ body {
 }
 
 .log-title {
-  margin-left: 45%;
+  margin-left: 17%;
   margin-top: 5rem;
 }
 
 .field {
-  margin-left: 45%;
+  margin-left: 17%;
 }
 
 .actions {
-  margin-left: 45%;
+  margin-left: 17%;
   margin-top: 1rem;
 }
 
+input {
+  width: 80%;
+}
+
+.checkbox {
+  margin-left: -48%;
+  margin-top: -1.2rem;
+}
+
 .log-links {
-  margin-left: 45%;
+  margin-left: 17%;
   margin-top: 0.5rem;
 }
