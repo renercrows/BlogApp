@@ -80,6 +80,27 @@ Example commands:
 
 ### Install
 
+Install this project with:
+
+<!--
+Example command: rails db:create
+
+### Usage
+
+To run the project, execute the following command:
+
+<!--
+Example command:
+
+```sh
+  rails server
+```
+
+<!-- AUTHORS -->
+
+## 👥 Author <a name="authors"></a>
+
+=======
 Install this project with: 
 
 - rails db:create
