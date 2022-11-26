@@ -10,4 +10,3 @@ class Api::V1::UsersController < Api::V1::ApplicationController
     render json: user, status: :ok
   end
 end
-
